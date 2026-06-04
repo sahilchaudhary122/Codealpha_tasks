@@ -11,8 +11,6 @@ def detect_sql_injection(text):
     text = text.upper()
 
     for pattern in dangerous_patterns:
-
         if pattern.upper() in text:
             return True
-
     return False
