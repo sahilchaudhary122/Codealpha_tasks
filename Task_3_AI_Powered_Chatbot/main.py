@@ -1,17 +1,13 @@
-from fastapi import FastAPI
-
+import fastapi  # type: ignore[import]
 from chatbot import get_response
 
-app = FastAPI()
-
+app = fastapi.FastAPI()
 
 @app.get("/")
 def home():
-
     return {
         "message": "AI Chatbot System"
     }
-
 
 @app.get("/chat")
 def chat(message: str):
